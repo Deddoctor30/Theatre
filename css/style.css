@@ -9,20 +9,6 @@ html, body {
   color: white;
 }
 
-.img-adaptiv {
-  position: relative;
-}
-
-.img-adaptiv img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -62,10 +48,26 @@ html, body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
 }
 
 .header__menu {
   margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .header__menu {
+    margin-top: 56px;
+  }
 }
 
 .header__telephone {
@@ -74,6 +76,36 @@ html, body {
   font-weight: 700;
   letter-spacing: 0.05em;
   margin-top: 50px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-left: 15px;
+}
+
+.header__telephone:hover {
+  color: red;
+}
+
+.header__telephone ::after {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 3px;
+  border-bottom: 2px solid #D1A954;
+}
+
+@media (max-width: 992px) {
+  .header__telephone {
+    padding: 50px 0px 0px 0px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__telephone {
+    margin: 0px;
+    padding: 0px 25px 0px 0px;
+    display: inline-block;
+  }
 }
 
 .menu {
@@ -83,16 +115,32 @@ html, body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 824px;
 }
 
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.menu__list > *:not(:last-child) {
-  margin: 0px 63px 0px 0px;
+@media (max-width: 768px) {
+  .menu__list {
+    display: none;
+  }
+}
+
+.menu__item {
+  height: 30px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 0px 15px 0px 0px;
 }
 
 .menu__link {
@@ -103,6 +151,10 @@ html, body {
   letter-spacing: 0.1em;
 }
 
+.menu__link:hover {
+  color: red;
+}
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -110,8 +162,33 @@ html, body {
   height: 100%;
 }
 
-.page__main {
-  background-image: url(/img/bg/Rectangle.jpg);
+.page__bg {
+  position: relative;
+  padding: 84.4% 0px 0px 0px;
+}
+
+.page__bg img {
+  position: absolute;
   width: 100%;
-  height: 1045px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.page__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }

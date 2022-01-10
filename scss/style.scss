@@ -12,17 +12,18 @@ html, body {
 	color: white;
 }
 
-.img-adaptiv {
-   position: relative;
-   img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-   }
-}
+// .img-adaptiv {
+//    position: relative;
+//    img {
+//       position: absolute;
+//       width: 100%;
+//       height: 100%;
+//       top: 0;
+//       left: 0;
+//       object-fit: cover;
+//       object-position: center;
+//    }
+// }
 
 
 
@@ -71,16 +72,23 @@ html, body {
    top: 0;
    left: 0;
    z-index: 50;
-
+   
    &__container {
       display: flex;
       min-height: 27px;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
+      @media (max-width: 768px) {
+         justify-content: right;
+      }
    }
 
    &__menu {
       margin-top: 50px;
+      @media (max-width: 768px) {
+         margin-top: 56px;
+      }
    }
 
    &__telephone {
@@ -89,6 +97,28 @@ html, body {
       font-weight: 700;
       letter-spacing: 0.05em;
       margin-top: 50px;
+      align-self: flex-start;
+      padding-left: 15px;
+      &:hover {
+         color: red;
+      }
+      ::after {
+         content: "";
+         display: block;
+         width: 100%;
+         padding-top: 3px;
+         border-bottom: 2px solid #D1A954;
+      }
+      @media (max-width: 992px) {
+         padding: 50px 0px 0px 0px;
+         margin: 0 auto;
+      }
+      @media (max-width: 768px) {
+         margin: 0px;
+         padding: 0px 25px 0px 0px;
+         display: inline-block;
+         
+      }
    }
 }
 
@@ -100,15 +130,23 @@ html, body {
 .menu {
    display: flex;
    justify-content: space-between;
+   width: 824px;
    &__list {
       // _____________________Адаптивный отступ у эл. 1 круга вниз, кроме посл._____________________
-      >*:not(:last-child){
-         margin: 0px 63px 0px 0px;
-      }
       display: flex;
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @media (max-width: 768px) {
+         display: none;
+      }
+
    }
 
    &__item {
+      height: 30px;
+      align-self: flex-end;
+      padding: 0px 15px 0px 0px;
    }
 
    &__link {
@@ -117,6 +155,9 @@ html, body {
       line-height: calc((24/18)*100%);
       font-weight: 700;
       letter-spacing: 0.1em;
+      &:hover {
+         color: red;
+      }
    }
 }
 
@@ -129,15 +170,79 @@ html, body {
    // Прибить футер к низу
    flex: 1 1 auto;
    height: 100%;
+   
+   &__bg {
+      position: relative;
+      padding: 84.4% 0px 0px 0px;
+      img {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+
    &__main {
-      background-image: url(/img/bg/Rectangle.jpg);
-      width: 100%;
-      height: 1045px;
    }
 
    &__container {
    }
+
+   &__wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+   }
 }
+
+.container {
+}
+
+.main {
+
+   &__content {
+      display: flex;
+   }
+}
+
+.content {
+   &__description {
+   }
+
+   &__title {
+   }
+
+   &__text {
+   }
+
+   &__btn {
+   }
+
+   &__slider {
+   }
+}
+
+.slider {
+
+   &__content {
+   }
+
+   &__img {
+   }
+
+   &__controlls {
+   }
+}
+
 //______________________________________Footer______________________________________
 .footer {
 }
+
+
+
+
