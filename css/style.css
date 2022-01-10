@@ -1,0 +1,117 @@
+@import url(../css/Null.css);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,400&display=swap");
+html, body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: white;
+}
+
+.img-adaptiv {
+  position: relative;
+}
+
+.img-adaptiv img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 27px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__menu {
+  margin-top: 50px;
+}
+
+.header__telephone {
+  font-size: 16px;
+  line-height: calc((22/16)*100%);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-top: 50px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__list > *:not(:last-child) {
+  margin: 0px 63px 0px 0px;
+}
+
+.menu__link {
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: calc((24/18)*100%);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 100%;
+}
+
+.page__main {
+  background-image: url(/img/bg/Rectangle.jpg);
+  width: 100%;
+  height: 1045px;
+}
