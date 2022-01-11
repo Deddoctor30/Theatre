@@ -1,9 +1,14 @@
-// ____________________Обнуляющий стиль_______________________________
+// _________________________________Обнуляющий стиль_______________________________
 @import url(../css/Null.css);
+
+//______________________________________Settings__________________________________________
+
 // _________________________Шрифты____________________________________
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,400&display=swap');
+
 // __________________________Текст____________________________________
+
 html, body {
    font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 14px;
@@ -11,21 +16,6 @@ html, body {
    font-weight: 400;
 	color: white;
 }
-
-// .img-adaptiv {
-//    position: relative;
-//    img {
-//       position: absolute;
-//       width: 100%;
-//       height: 100%;
-//       top: 0;
-//       left: 0;
-//       object-fit: cover;
-//       object-position: center;
-//    }
-// }
-
-
 
 // __________________________Тело_____________________________________
 
@@ -36,12 +26,6 @@ html, body {
    //_________________Прибить футер к низу_________________
    display: flex;
    flex-direction: column;
-}
-
-.header {
-
-   &__container {
-   }
 }
 
 .container {
@@ -59,10 +43,21 @@ html, body {
 
 
 
-//_________________________________________Header_________________________________________
+// __________________________Адаптивная картинка_____________________________________
+// .img-adaptiv {
+//    position: relative;
+//    img {
+//       position: absolute;
+//       width: 100%;
+//       height: 100%;
+//       top: 0;
+//       left: 0;
+//       object-fit: cover;
+//       object-position: center;
+//    }
+// }
 
-
-
+//_______________________________________Header___________________________________________
 
 
 .header {
@@ -161,10 +156,8 @@ html, body {
    }
 }
 
+//_______________________________________Page_____________________________________________
 
-
-
-//______________________________________Page______________________________________
 
 .page {
    // Прибить футер к низу
@@ -206,21 +199,46 @@ html, body {
 .main {
 
    &__content {
-      display: flex;
+      margin: 267px 0px 0px 0px;
    }
 }
 
 .content {
+   display: flex;
    &__description {
+      margin: 117px 0px 0px 0px;
    }
 
    &__title {
+      font-size: 64px;
+      line-height: calc((87/64)*100%);
+      text-transform: uppercase;
    }
 
    &__text {
+      margin: 38px 125px 0px 0px;
+      font-size: 14px;
+      line-height: 150%;
+      font-family: 'Open Sans', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      max-width: 540px;
    }
 
    &__btn {
+      margin: 50px 0px 0px 0px;
+      background-color: #D1A954;
+      height: 50px;
+      width: 160px;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s all;
+      line-height: calc((25/18)*100%);
    }
 
    &__slider {
@@ -239,10 +257,7 @@ html, body {
    }
 }
 
-//______________________________________Footer______________________________________
+//______________________________________Footer____________________________________________
+
 .footer {
 }
-
-
-
-

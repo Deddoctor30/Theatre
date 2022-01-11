@@ -188,7 +188,54 @@ html, body {
 }
 
 .main__content {
+  margin: 267px 0px 0px 0px;
+}
+
+.content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.content__description {
+  margin: 117px 0px 0px 0px;
+}
+
+.content__title {
+  font-size: 64px;
+  line-height: calc((87/64)*100%);
+  text-transform: uppercase;
+}
+
+.content__text {
+  margin: 38px 125px 0px 0px;
+  font-size: 14px;
+  line-height: 150%;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 540px;
+}
+
+.content__btn {
+  margin: 50px 0px 0px 0px;
+  background-color: #D1A954;
+  height: 50px;
+  width: 160px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  line-height: calc((25/18)*100%);
 }
