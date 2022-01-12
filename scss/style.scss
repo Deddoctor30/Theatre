@@ -41,8 +41,6 @@ html, body {
 }
 
 
-
-
 // __________________________Адаптивная картинка_____________________________________
 // .img-adaptiv {
 //    position: relative;
@@ -57,6 +55,21 @@ html, body {
 //    }
 // }
 
+
+// &__back {
+//    position: relative;
+//    &::before {
+//       content: "";
+//       position: absolute;
+//       background-image: url(/img/slider/Arrowdark.svg);
+//       background-repeat: no-repeat;
+//       background-size: 100px;
+//       width: 41px;
+//       height: 16px;
+//       top: 5px;
+//       left: 0px;
+//    }
+// }
 //_______________________________________Header___________________________________________
 
 
@@ -163,10 +176,21 @@ html, body {
    // Прибить футер к низу
    flex: 1 1 auto;
    height: 100%;
-   
+   &__left-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(51, 51, 51, 0.678);
+      height: 1045px;
+      width: 160px;
+      @media(max-width: 1477px) {
+         display: none;
+      }
+   }
    &__bg {
       position: relative;
-      padding: 84.4% 0px 0px 0px;
+      padding: 54.4% 0px 0px 0px;
+      min-height: 1045px;
       img {
          position: absolute;
          width: 100%;
@@ -191,7 +215,11 @@ html, body {
       width: 100%;
       height: 100%;
    }
+
+   &__social {
+   }
 }
+
 
 .container {
 }
@@ -239,6 +267,7 @@ html, body {
       font-weight: bold;
       transition: 0.3s all;
       line-height: calc((25/18)*100%);
+      letter-spacing: 0.1em;
    }
 
    &__slider {
@@ -246,7 +275,9 @@ html, body {
 }
 
 .slider {
-
+   @media (max-width: 992px) {
+      display: none;
+   }
    &__content {
    }
 
@@ -254,10 +285,123 @@ html, body {
    }
 
    &__controlls {
+      display: flex;
+      justify-content: space-between;
+      margin: 35px 0px 0px 0px;
+   }
+
+   &__next {
+      font-family: 'Open Sans Condensed';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: calc((25/18)*100%);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      position: relative;
+      padding: 0px 65px 0px 0px;
+      &::after {
+         content: "";
+         position: absolute;
+         background-image: url(/img/slider/Arrowdark.svg);
+         transform: rotate(180deg);
+         background-repeat: no-repeat;
+         // background-size: 100px;
+         width: 41px;
+         height: 16px;
+         top: 5px;
+         left: 68px;
+      }
+   }
+
+   &__back {
+      font-family: 'Open Sans Condensed';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: calc((25/18)*100%);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      position: relative;
+      padding: 0px 0px 0px 65px;
+      &::before {
+         content: "";
+         position: absolute;
+         background-image: url(/img/slider/Arrowdark.svg);
+         background-repeat: no-repeat;
+         width: 41px;
+         height: 16px;
+         top: 5px;
+         left: 0px;
+      }
    }
 }
+
+.social {
+   z-index: 10;
+   position: absolute;
+   top: 400px;
+   left: 62px;
+   display: flex;
+   flex-direction: column;
+   @media(max-width: 1477px) {
+      display: none;
+   }
+   &__text {
+      display: inline-block;
+      font-family: 'Open Sans Condensed';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #C4C4C4;
+      span {
+         height: 25px;
+         width: 250px;
+         display: flex;
+         transform: rotate(-90deg) translate(110px, -109px);
+      }
+
+   }
+
+   &__line {
+      height: 80px;
+      width: 3px;
+      background-color: #C4C4C4;
+      margin: 40px 0px 40px 12px;
+   }
+
+
+   &__media {
+      height: 50px;
+      width: 50px;
+   }
+
+   &__list {
+      width: 26px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      >*:not(:last-child){
+         margin: 0px 0px 30px 0px;
+      }
+   }
+
+   &__item{
+      a {
+         width: 100%;
+      }
+   }
+}
+
 
 //______________________________________Footer____________________________________________
 
 .footer {
+   background-color: rgb(91, 175, 133);
+   height: 50px;
+
 }
