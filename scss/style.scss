@@ -4,7 +4,8 @@
 //______________________________________Settings__________________________________________
 
 // _________________________Шрифты____________________________________
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,400&display=swap');
 
 // __________________________Текст____________________________________
@@ -15,6 +16,46 @@ html, body {
    line-height: 1;
    font-weight: 400;
 	color: white;
+}
+
+.title {
+   font-size: 64px;
+   line-height: calc((87/64)*100%);
+   text-transform: uppercase;
+   font-weight: 700;
+}
+
+.text {
+   margin: 38px 125px 0px 0px;
+   font-size: 14px;
+   line-height: 150%;
+   font-family: 'Open Sans', sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   max-width: 540px;
+}
+
+.title--low {
+   font-family: 'Open Sans Condensed';
+   font-style: normal;
+   font-weight: bold;
+   font-size: 21px;
+   line-height: 29px;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+}
+
+.text--low {
+   font-family: 'Open Sans';
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 150%;
+}
+
+span {
+   color: #D1A954;
 }
 
 // __________________________Тело_____________________________________
@@ -238,20 +279,9 @@ html, body {
    }
 
    &__title {
-      font-size: 64px;
-      line-height: calc((87/64)*100%);
-      text-transform: uppercase;
    }
 
    &__text {
-      margin: 38px 125px 0px 0px;
-      font-size: 14px;
-      line-height: 150%;
-      font-family: 'Open Sans', sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      max-width: 540px;
    }
 
    &__btn {
@@ -268,6 +298,7 @@ html, body {
       transition: 0.3s all;
       line-height: calc((25/18)*100%);
       letter-spacing: 0.1em;
+      color: white;
    }
 
    &__slider {
@@ -337,6 +368,8 @@ html, body {
    }
 }
 
+//______________________________________Sosial____________________________________________
+
 .social {
    z-index: 10;
    position: absolute;
@@ -396,6 +429,70 @@ html, body {
       }
    }
 }
+//______________________________________About____________________________________________
+
+.page {
+   background-color: #333333;
+   &__about {
+   }
+}
+.about {
+
+   &__inner {
+      margin: 150px 0px 150px 0px;
+   }
+
+   &__title {
+      text-align: center;
+      font-family: 'Open Sans Condensed';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 48px;
+      line-height: 65px;
+      margin: 150px 0px 100px 0px;
+   }
+
+   &__content {
+      display: flex;
+   }
+
+   &__text {
+      flex: 0 1 auto;
+      max-width: 445px;
+      margin: 0px 30px 0px 0px;
+      h2{
+         font-size: 21px;
+         line-height: calc((29/21)*100%);
+         margin: 0px 0px 40px 0px;
+      }
+
+      p{
+         font-family: 'Open Sans', sans-serif;
+         font-size: 14px;
+         line-height: calc((21/14)*100%);
+         font-weight: normal;
+      }
+   }
+
+   &__info {
+      margin: 0px 30px 0px 0px;
+      h2{
+         margin: 0px 0px 40px 0px;
+      }
+   }
+
+   &__doc {
+      margin: 0px 0px 25px 0px;
+   }
+
+   &__photo {
+   }
+}
+.container {
+}
+.title {
+}
+
 
 
 //______________________________________Footer____________________________________________

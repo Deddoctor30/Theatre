@@ -1,5 +1,5 @@
 @import url(../css/Null.css);
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,400&display=swap");
 html, body {
   font-family: 'Open Sans Condensed', sans-serif;
@@ -7,6 +7,46 @@ html, body {
   line-height: 1;
   font-weight: 400;
   color: white;
+}
+
+.title {
+  font-size: 64px;
+  line-height: calc((87/64)*100%);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.text {
+  margin: 38px 125px 0px 0px;
+  font-size: 14px;
+  line-height: 150%;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 540px;
+}
+
+.title--low {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.text--low {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+span {
+  color: #D1A954;
 }
 
 .wrapper {
@@ -217,23 +257,6 @@ html, body {
   margin: 117px 0px 0px 0px;
 }
 
-.content__title {
-  font-size: 64px;
-  line-height: calc((87/64)*100%);
-  text-transform: uppercase;
-}
-
-.content__text {
-  margin: 38px 125px 0px 0px;
-  font-size: 14px;
-  line-height: 150%;
-  font-family: 'Open Sans', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  max-width: 540px;
-}
-
 .content__btn {
   margin: 50px 0px 0px 0px;
   background-color: #D1A954;
@@ -255,6 +278,7 @@ html, body {
   transition: 0.3s all;
   line-height: calc((25/18)*100%);
   letter-spacing: 0.1em;
+  color: white;
 }
 
 @media (max-width: 992px) {
@@ -398,6 +422,63 @@ html, body {
 
 .social__item a {
   width: 100%;
+}
+
+.page {
+  background-color: #333333;
+}
+
+.about__inner {
+  margin: 150px 0px 150px 0px;
+}
+
+.about__title {
+  text-align: center;
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 65px;
+  margin: 150px 0px 100px 0px;
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  max-width: 445px;
+  margin: 0px 30px 0px 0px;
+}
+
+.about__text h2 {
+  font-size: 21px;
+  line-height: calc((29/21)*100%);
+  margin: 0px 0px 40px 0px;
+}
+
+.about__text p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: calc((21/14)*100%);
+  font-weight: normal;
+}
+
+.about__info {
+  margin: 0px 30px 0px 0px;
+}
+
+.about__info h2 {
+  margin: 0px 0px 40px 0px;
+}
+
+.about__doc {
+  margin: 0px 0px 25px 0px;
 }
 
 .footer {
